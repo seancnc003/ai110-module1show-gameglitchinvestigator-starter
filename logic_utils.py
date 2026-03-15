@@ -14,13 +14,26 @@ def parse_guess(raw: str):
 
 def check_guess(guess, secret):
     """
-    Compare guess to secret and return (outcome, message).
+    Compare guess to secret and return outcome string.
 
     outcome examples: "Win", "Too High", "Too Low"
     """
-    raise NotImplementedError("Refactor this function from app.py into logic_utils.py")
+    if guess == secret:
+        return "Win"
+    if guess > secret:
+        return "Too High"
+    return "Too Low"
 
 
 def update_score(current_score: int, outcome: str, attempt_number: int):
     """Update score based on outcome and attempt number."""
     raise NotImplementedError("Refactor this function from app.py into logic_utils.py")
+
+
+def reset_game():
+    """Return a fresh game state dictionary."""
+    return {
+        "attempts": 0,
+        "status": "playing",
+        "history": [],
+    }
