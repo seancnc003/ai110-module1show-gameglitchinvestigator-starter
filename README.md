@@ -53,4 +53,5 @@ My screenshot shows both fixes. The hint is now correct, and because I can play 
 
 ## 🚀 Stretch Features
 
+- [x] **Challenge 3: Professional Documentation and Linting** — Added Google-style docstrings with Args, Returns, and Raises sections to every function in `logic_utils.py`. Reviewed both `logic_utils.py` and `app.py` for PEP 8 compliance and resolved all violations (line length, blank lines, trailing whitespace).
 - [ ] [If you choose to complete Challenge 4, insert a screenshot of your Enhanced Game UI here]

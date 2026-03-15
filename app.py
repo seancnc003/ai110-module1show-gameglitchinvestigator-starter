@@ -1,6 +1,7 @@
 import random
 import streamlit as st
 
+
 def get_range_for_difficulty(difficulty: str):
     if difficulty == "Easy":
         return 1, 20
@@ -28,13 +29,14 @@ def parse_guess(raw: str):
 
     return True, value, None
 
-"""
-I identified the bug and the AI refactored the code as well as 
-finding a related bug which it also fixed.
-"""
+# I identified the bug and the AI refactored the code as well as
+# finding a related bug which it also fixed.
 
 # FIXME: Logic for bug 1, hints breaks here
-# Bug 1 fixed: hints now correctly say "Go LOWER!" when guess is too high, "Go HIGHER!" when too low
+# Bug 1 fixed: hints now correctly say "Go LOWER!" when
+# guess is too high, "Go HIGHER!" when too low
+
+
 def check_guess(guess, secret):
     if guess == secret:
         return "Win", "🎉 Correct!"
@@ -69,6 +71,7 @@ def update_score(current_score: int, outcome: str, attempt_number: int):
         return current_score - 5
 
     return current_score
+
 
 st.set_page_config(page_title="Glitchy Guesser", page_icon="🎮")
 
@@ -137,13 +140,12 @@ with col2:
 with col3:
     show_hint = st.checkbox("Show hint", value=True)
 
-"""
-I identified the bug but was unsure where it was.
-The AI was able to find the bug and fix it
-"""
+# I identified the bug but was unsure where it was.
+# The AI was able to find the bug and fix it
 
 # FIXME: Logic for bug 3, new game does not reset the game
-# Bug 2 fixed: new game now fully resets status, history; uses difficulty range for new secret
+# Bug 2 fixed: new game now fully resets status, history;
+# uses difficulty range for new secret
 if new_game:
     st.session_state.attempts = 0
     st.session_state.secret = random.randint(low, high)
@@ -170,7 +172,8 @@ if submit:
     else:
         st.session_state.history.append(guess_int)
 
-        secret = st.session_state.secret  # Always use int for correct comparison
+        # Always use int for correct comparison
+        secret = st.session_state.secret
 
         outcome, message = check_guess(guess_int, secret)
 
