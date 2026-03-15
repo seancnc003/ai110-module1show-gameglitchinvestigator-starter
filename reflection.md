@@ -79,6 +79,12 @@ in me being able to create the tests and run it.
 
 - How would you explain Streamlit "reruns" and session state to a friend who has never used Streamlit?
 
+Streamlit is reloaded from the full page with the code top to bottom all the time through the reruns 
+everytime the user interacts with the app with hitting a button for example. 
+Session state is important for the persistence and keeping of the memory. The session states allow 
+for data to be stored especially in this game with the secret number, number of attempts, game status,
+and history.
+
 ---
 
 ## 5. Looking ahead: your developer habits
@@ -87,3 +93,17 @@ in me being able to create the tests and run it.
   - This could be a testing habit, a prompting strategy, or a way you used Git.
 - What is one thing you would do differently next time you work with AI on a coding task?
 - In one or two sentences, describe how this project changed the way you think about AI generated code.
+
+One strategy from this project that I want to reuse in future labs is being able to know 
+at least roughly which parts of the code deals with what's on the program. Being able to know
+quickly where the hints section or where new game is in the codebase made debugging with AI faster
+and also helped me understand the changes that I am putting in better.
+
+One thing I would do differently is be more critical of the code. I didn't have previous experience with
+pytest, so I could've dug deeper into the code changes that the AI was implementing.
+
+This project changed the way I thought about AI generated code because it showed me how important context
+and double checking AI generated code is. I had mentioned it previously, but when I had told the AI
+to write test cases for me, it didn't write the test cases I wanted it to do. It didn't understand
+my intent right away and it was on me to be clearer. It was a good catch that I caught it early and not 
+later on.

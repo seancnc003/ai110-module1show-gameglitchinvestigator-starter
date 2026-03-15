@@ -29,9 +29,27 @@ It wrote the code, ran away, and now the game is unplayable.
 - [ ] Detail which bugs you found.
 - [ ] Explain what fixes you applied.
 
+Answer:
+The game's purpose is to be a simple number guessing game. Depending on the difficulty selected,
+there is a different range of numbers and different number of attempts. The user tries to guess
+the secret number that the program generates.
+
+While there were a couple of bugs that I found, there was two in particular I decided to fix.
+The first bug had to do with hints. The game was giving the wrong hints in that it told the
+user to guess a lower number when the user should guess a higher number and vice versa.
+The second bug dealt with new games. After getting a correct guess or running out of attemps,
+the user was not able to input any new numbers after starting a new game.
+
+The fixes that I applied was working with the AI to change the hints to the proper higher or lower. 
+Along the way, it found an interesting bug where on even attempts, the number was being passed as 
+a string type instead of integer. The AI fixed this bug too so it's always passed as a integer.
+The second fixed I applied was changing the states and different variables inside when creating a new game. User can now play a new game with new attempts. The AI helped me with the logic as I wasn't too familiar on how to actually implement that code.
+
+My screenshot shows both fixes. The hint is now correct, and because I can play multiple games now, the score reads 300.
+
 ## 📸 Demo
 
-- [ ] [Insert a screenshot of your fixed, winning game here]
+![Fixed game demo](demo-screenshot.png)
 
 ## 🚀 Stretch Features
 
